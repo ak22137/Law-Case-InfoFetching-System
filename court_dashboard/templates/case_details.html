@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="mb-4">Case Details</h2>
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% else %}
+        <div class="card p-4 shadow-sm mb-4">
+            <h5>Case: {{ case_type }} {{ case_number }} / {{ filing_year }}</h5>
+            <p><strong>Petitioner:</strong> {{ parties.petitioner }}</p>
+            <p><strong>Respondent:</strong> {{ parties.respondent }}</p>
+            <p><strong>Filing Date:</strong> {{ filing_date }}</p>
+            <p><strong>Next Hearing Date:</strong> {{ next_hearing_date }}</p>
+        </div>
+        <div class="card p-4 shadow-sm">
+            <h5>Recent Orders/Judgments</h5>
+            <ul class="list-group">
+                {% for order in orders %}
+                <li class="list-group-item">
+                    <strong>{{ order.date }}:</strong> {{ order.title }}
+                    {% if order.pdf_link %}
+                    <a href="{{ order.pdf_link }}" class="btn btn-sm btn-outline-primary ms-2" target="_blank">Download PDF</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <a href="/" class="btn btn-link mt-4">Back to Search</a>
+</div>
+</body>
+</html>
