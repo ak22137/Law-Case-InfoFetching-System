@@ -1,5 +1,9 @@
 # Law Case InfoFetching System
 
+
+https://github.com/user-attachments/assets/125cd3f7-c661-47d7-9979-d892a1bd9994
+
+
 This project is a Court Dashboard web application designed to fetch, display, and manage law case information. It provides a user-friendly interface for viewing case details and demo data, and includes a scraper for gathering case information.
 
 ## Features
@@ -28,7 +32,11 @@ court_dashboard/
    - Install Flask: `pip install flask`
 2. **Run the Application**
    - Navigate to the `court_dashboard` directory.
-   - Start the app: `python app.py`
+   - Start the app
+
+https://github.com/user-attachments/assets/2b512ca6-758a-45a6-823c-bddab31220a3
+
+: `python app.py`
 3. **Access the Dashboard**
    - Open your browser and go to `http://localhost:5000`
 
