@@ -8,11 +8,10 @@ https://github.com/user-attachments/assets/123e8f4b-0c05-454c-a3c6-77bd959d6f7a
 
 
 
-This project is a Court Dashboard web application designed to fetch, display, and manage law case information. It provides a user-friendly interface for viewing case details and demo data, and includes a scraper for gathering case information.
+This project is a Court Dashboard web application designed to fetch, display, and manage law case information. It provides a user-friendly interface for viewing case details, and includes a scraper for gathering case information.
 
 ## Features
 - Dashboard for viewing law case details
-- Demo data for testing and demonstration
 - Scraper to fetch case information
 - SQLite database for storing queries
 - HTML templates for UI rendering
@@ -21,7 +20,6 @@ This project is a Court Dashboard web application designed to fetch, display, an
 ```
 court_dashboard/
 ├── app.py                # Main Flask application
-├── demo_data.py          # Demo data for testing
 ├── queries.db            # SQLite database
 ├── scraper.py            # Scraper for case info
 ├── templates/
